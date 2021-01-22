@@ -1,0 +1,7 @@
+{
+	name: {
+		first: 'Paul',
+		last: 'Ashby'
+	},
+	hobbies: ['drumming', 'painting', reading']
+}
