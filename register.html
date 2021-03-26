@@ -1,3 +1,9 @@
+<css-import-placeholder>
+<jquery-import-placeholder>
+<complexify-import-placeholder>
+<complexifybanlist-import-placeholder>
+<xregexp-import-placeholder>
+<inputfieldpassword-import-placeholder>
 <form class='form form--register' action='/' method='post' data-role='register'>
 	<div class='form__inputs'>
 		<csrf-token-placeholder>
@@ -11,12 +17,22 @@
 		<input type='text' id='username' class='form__input form__input--validate form__input--username' name='username' placeholder='User name' pattern='[A-Za-z0-9]+(?:[_-][A-Za-z0-9]+)*' required>
 		<label class='form__error'>Please enter a unique user name</label>
 
+		<ul class='Inputfields'>
+			<li class='Inputfield InputfieldPassword Inputfield_pass' id='wrap_Inputfield_pass' style=''>
+		 		<div class='InputfieldContent'>
+		 			<p class='description'>Minimum requirements: <span class='pass-require pass-require-minlength '>at least 6 characters long</span>, <span class='pass-require pass-require-letter '>letter</span>, <span class='pass-require pass-require-digit '>digit</span>.</p>
+		 			<p class='InputfieldPasswordRow'><label for='Inputfield_pass'>New password</label><input placeholder='New password' id='Inputfield_pass' class='FieldtypePassword InputfieldPasswordComplexify' name='pass' type='password' size='50' maxlength='128' autocomplete='new-password' data-banmode='loose' data-factor='0.7' data-minlength='6' required> <span class='detail pass-scores' data-requirements='minlength letter digit'><span class='pass-fail'><i class='fa fa-fw fa-frown-o'></i>Not yet valid</span><span class='pass-invalid'><i class='fa fa-fw fa-frown-o'></i>Invalid</span><span class='pass-short'><i class='fa fa-fw fa-frown-o'></i>Too short</span><span class='pass-common'><i class='fa fa-fw fa-frown-o'></i>Too common</span><span class='pass-same'><i class='fa fa-fw fa-frown-o'></i>Same as old</span><span class='pass-weak'><i class='fa fa-fw fa-meh-o'></i>Weak</span><span class='pass-medium'><i class='fa fa-fw fa-meh-o'></i>Ok</span><span class='pass-good'><i class='fa fa-fw fa-smile-o'></i>Good</span><span class='pass-excellent'><i class='fa fa-fw fa-smile-o'></i>Excellent</span></span></p>
+		 			<p class='InputfieldPasswordRow'><label for='_Inputfield_pass'>Confirm</label><input placeholder='Confirm' class='InputfieldPasswordConfirm FieldtypePassword' type='password' size='50' id='_Inputfield_pass' name='_pass' value='' autocomplete='new-password' disabled='disabled' required> <span class='pass-confirm detail'><span class='confirm-yes'><i class='fa fa-fw fa-smile-o'></i>Matches</span><span class='confirm-no'><i class='fa fa-fw fa-frown-o'></i>Does not match</span><span class='confirm-qty'><i class='fa fa-fw fa-meh-o'></i><span></span></span></span></p>
+		 		</div>
+		 	</li>
+		</ul>
+
 		<label for='email' class='form__label'>Email:</label>
 		<input type='email' id='email' class='form__input form__input--validate form__input--email' name='email' placeholder='Email address' pattern='([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))' required>
 		<label class='form__error'>Please enter a valid email address</label>
 
 		 <label for='address'>Address:</label>
-		 <textarea id='address' class='form__input  form__input--textarea form__input--address' name='address' placeholder='Address' pattern='^[A-Za-z\d,.-\s]+$' required></textarea></textarea> 
+		 <textarea id='address' class='form__input  form__input--textarea form__input--address' name='address' placeholder='Address' pattern='[A-Za-z\d,.-\s]+' required></textarea></textarea> 
 
 		 <label for='postcode' class='form__label'>Postcode:</label>
 		 <input type='text' class='form__input form__input--validate form__input--postcode' name='postcode' placeholder='Postcode' pattern='(([A-Za-z][0-9]{1,2})|(([A-Za-z][A-HJ-Ya-hj-ya][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-HJ-Ya-hj-y][0-9]?[A-Za-z]))))[\s]*[0-9][A-Za-z]{2}' required>
@@ -27,10 +43,10 @@
 
 		<label for='tel' class='form__label'>Tel:</label>
 		<input type='tel' id='tel' class='form__input form__input--validate form__input--phone' name='tel' placeholder='Tel: 8888 888 8888' pattern='[0-9]{4} [0-9]{3} [0-9]{4}' maxlength='13'  title='Eleven digit code'>
-		<label class='form__error'>Please enter a correctly formatted telephone number</label>
+		<label class='form__error'>Please enter a correctly formatted telephone number</label required>
 		
 		<label for='message' class='form__label'>Message:</label>
-		<textarea id='message' class='form__input  form__input--textarea form__input--message' name='message' placeholder='Message' required></textarea>
+		<textarea id='message' class='form__input  form__input--textarea form__input--message' name='message' placeholder='Message'></textarea>
 
 		<input type='checkbox' id='consent' name='consent' value='granted' required>
 		<label for='consent' class='form__label'>I consent to the storage of my information while this query is being handled.</label>
