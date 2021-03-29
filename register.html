@@ -42,8 +42,8 @@
 		<input type='checkbox' name='website' value='website' tabindex='-1'>
 
 		<label for='regtel' class='form__label'>Tel:</label>
-		<input type='tel' id='regtel' class='form__input form__input--validate form__input--phone' name='tel' placeholder='Tel: 8888 888 8888' pattern='[0-9]{4} [0-9]{3} [0-9]{4}' maxlength='13'  title='Eleven digit code'>
-		<label class='form__error'>Please enter a correctly formatted telephone number</label required>
+		<input type='tel' id='regtel' class='form__input form__input--validate form__input--phone' name='tel' placeholder='Tel: 8888 888 8888' mixlength='9' maxlength='13' required>
+		<label class='form__error'>Please enter a valid telephone number</label>
 		
 		<label for='regmessage' class='form__label'>Message:</label>
 		<textarea id='regmessage' class='form__input  form__input--textarea form__input--message' name='message' placeholder='Message'></textarea>
