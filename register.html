@@ -17,12 +17,12 @@
 		<input type='text' id='regusername' class='form__input form__input--validate form__input--username' name='username' placeholder='User name' pattern='[A-Za-z0-9]+(?:[_-][A-Za-z0-9]+)*' required>
 		<label class='form__error'>Please enter a unique user name</label>
 
-		<ul class='Inputfields'>
+		<ul class='Inputfields form__inputfields'>
 			<li class='Inputfield InputfieldPassword Inputfield_pass' id='wrap_Inputfield_pass' style=''>
 		 		<div class='InputfieldContent'>
 		 			<p class='description'>Minimum requirements: <span class='pass-require pass-require-minlength '>at least 6 characters long</span>, <span class='pass-require pass-require-letter '>letter</span>, <span class='pass-require pass-require-digit '>digit</span>.</p>
-		 			<p class='InputfieldPasswordRow'><label for='Inputfield_pass'>New password</label><input placeholder='New password' id='Inputfield_pass' class='FieldtypePassword InputfieldPasswordComplexify' name='pass' type='password' size='50' maxlength='128' autocomplete='new-password' data-banmode='loose' data-factor='0.7' data-minlength='6' required> <span class='detail pass-scores' data-requirements='minlength letter digit'><span class='pass-fail'><i class='fa fa-fw fa-frown-o'></i>Not yet valid</span><span class='pass-invalid'><i class='fa fa-fw fa-frown-o'></i>Invalid</span><span class='pass-short'><i class='fa fa-fw fa-frown-o'></i>Too short</span><span class='pass-common'><i class='fa fa-fw fa-frown-o'></i>Too common</span><span class='pass-same'><i class='fa fa-fw fa-frown-o'></i>Same as old</span><span class='pass-weak'><i class='fa fa-fw fa-meh-o'></i>Weak</span><span class='pass-medium'><i class='fa fa-fw fa-meh-o'></i>Ok</span><span class='pass-good'><i class='fa fa-fw fa-smile-o'></i>Good</span><span class='pass-excellent'><i class='fa fa-fw fa-smile-o'></i>Excellent</span></span></p>
-		 			<p class='InputfieldPasswordRow'><label for='_Inputfield_pass'>Confirm</label><input placeholder='Confirm' class='InputfieldPasswordConfirm FieldtypePassword' type='password' size='50' id='_Inputfield_pass' name='_pass' value='' autocomplete='new-password' disabled='disabled' required> <span class='pass-confirm detail'><span class='confirm-yes'><i class='fa fa-fw fa-smile-o'></i>Matches</span><span class='confirm-no'><i class='fa fa-fw fa-frown-o'></i>Does not match</span><span class='confirm-qty'><i class='fa fa-fw fa-meh-o'></i><span></span></span></span></p>
+		 			<p class='InputfieldPasswordRow'><label for='Inputfield_pass'>New password</label><input placeholder='New password' id='Inputfield_pass' class='form__input form__input--pass FieldtypePassword InputfieldPasswordComplexify' name='pass' type='password' size='50' maxlength='128' autocomplete='new-password' data-banmode='loose' data-factor='0.7' data-minlength='6' required> <span class='detail pass-scores' data-requirements='minlength letter digit'><span class='pass-fail'><i class='fa fa-fw fa-frown-o'></i>Not yet valid</span><span class='pass-invalid'><i class='fa fa-fw fa-frown-o'></i>Invalid</span><span class='pass-short'><i class='fa fa-fw fa-frown-o'></i>Too short</span><span class='pass-common'><i class='fa fa-fw fa-frown-o'></i>Too common</span><span class='pass-same'><i class='fa fa-fw fa-frown-o'></i>Same as old</span><span class='pass-weak'><i class='fa fa-fw fa-meh-o'></i>Weak</span><span class='pass-medium'><i class='fa fa-fw fa-meh-o'></i>Ok</span><span class='pass-good'><i class='fa fa-fw fa-smile-o'></i>Good</span><span class='pass-excellent'><i class='fa fa-fw fa-smile-o'></i>Excellent</span></span></p>
+		 			<p class='InputfieldPasswordRow'><label for='_Inputfield_pass'>Confirm</label><input placeholder='Confirm' class='form__input form__input--pass-confirm InputfieldPasswordConfirm FieldtypePassword' type='password' size='50' id='_Inputfield_pass' name='_pass' value='' autocomplete='new-password' disabled='disabled' required> <span class='pass-confirm detail'><span class='confirm-yes'><i class='fa fa-fw fa-smile-o'></i>Matches</span><span class='confirm-no'><i class='fa fa-fw fa-frown-o'></i>Does not match</span><span class='confirm-qty'><i class='fa fa-fw fa-meh-o'></i><span></span></span></span></p>
 		 		</div>
 		 	</li>
 		</ul>
@@ -42,7 +42,7 @@
 		<input type='checkbox' name='website' value='website' tabindex='-1'>
 
 		<label for='regtel' class='form__label'>Tel:</label>
-		<input type='tel' id='regtel' class='form__input form__input--validate form__input--phone' name='tel' placeholder='Tel: 8888 888 8888' mixlength='9' maxlength='13' required>
+		<input type='tel' id='regtel' class='form__input form__input--validate form__input--phone' name='tel' placeholder='Tel: 8888 888 8888' minlength='9' maxlength='13' required>
 		<label class='form__error'>Please enter a valid telephone number</label>
 		
 		<label for='regmessage' class='form__label'>Message:</label>
