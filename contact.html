@@ -12,18 +12,21 @@
 		<label class='form__error'>Please enter a valid email address</label>
 
 		<label for='contacttel' class='form__label'>Tel:</label>
-		<input type='tel' id='contacttel' class='form__input form__input--validate form__input--phone' name='tel' placeholder='Tel: 8888 888 8888' pattern='[0-9]{4} [0-9]{3} [0-9]{4}' maxlength='13'  title='Eleven digit code'>
+		<input type='tel' id='contacttel' class='form__input form__input--validate form__input--phone' name='tel' placeholder='Tel: 8888 888 8888' minlength='9' maxlength='13'>
 		<label class='form__error'>Please enter a correctly formatted telephone number</label>
 		
 		<label for='contactmessage' class='form__label'>Message:</label>
 		<textarea id='contactmessage' class='form__input  form__input--textarea' name='message' placeholder='Message' required></textarea>
 
-		<input type='checkbox' name='website' value='website' tabindex='-1'>
+		<input type='checkbox' class='form__input--web' name='website' value='website' tabindex='-1'>
 
-		<input type='checkbox' id='contactconsent' class='consent-checkbox' name='consent' value='granted' required>
-		<label for='contactconsent' class='form__label'>I consent to the storage of my information while this query is being handled.</label>
-		<p>For more information, please see <a href='/' id='contactform__privacy-policy-link' data-action='privacy' data-actionurl='/internal/contact-form-processor/'>our privacy policy</a></p>
-		<input type='submit' class='form__button form__button--submit' value='submit' data-action='contact'  data-actionurl='/internal/contact-form-processor/'>
-		<input type='button' class='form__button form__button--cancel' value='cancel' data-action='cancel' data-actionurl='/' >
+		<div class='form__consent'>
+			<input type='checkbox' id='contactconsent' class='form__consent-checkbox' name='consent' value='granted' required>
+				<label for='contactconsent' class='form__label form__note form__note--consent'>I consent to the storage of my information while this query is being handled.</label>
+		</div>
+
+		<p class='form__note form__note--privacy'>For more info, please see <a href='/' id='contactform__privacy-policy-link' data-action='privacy' data-actionurl='/internal/contact-form-processor/'>our privacy policy</a></p>
+				<input type='submit' class='form__button form__button--submit' value='submit' data-action='contact'  data-actionurl='/internal/contact-form-processor/'>
+				<input type='button' class='form__button form__button--cancel' value='cancel' data-action='cancel' data-actionurl='/' >
 	</div>	
 </form>
