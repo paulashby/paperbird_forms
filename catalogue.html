@@ -1,0 +1,31 @@
+<form class='form form--catalogue' action='/' method='post' data-role='catalogue'>
+	<div class='form__inputs'>
+		<csrf-token-placeholder>
+		<label for='contactfname' class='form__label'>First name:</label>
+		<input type='text' id='contactfname' class='form__input form__input--name' name='fname' placeholder='First name' required>
+
+		<label for='contactlname' class='form__label'>Last name:</label>
+		<input type='text' id='contactlname' class='form__input form__input--name' name='lname' placeholder='Last name' required>
+
+		<label for='contactemail' class='form__label'>Please enter a valid email address:</label>
+		<input type='email' id='contactemail' class='form__input form__input--validate form__input--email' name='email' placeholder='Email address' pattern='^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$' required>
+		<label class='form__error'>Please enter a valid email address</label>
+
+		 <label for='regaddress' class='form__label'>Address:</label>
+		 <textarea id='regaddress' class='form__input  form__input--textarea form__input--address' name='address' placeholder='Address' pattern='[A-Za-z\d,.-\s]+' required></textarea></textarea>
+
+		 <label for='regpostcode' class='form__label'>Postcode:</label>
+		 <input type='text' id='regpostcode' class='form__input form__input--validate form__input--postcode' name='postcode' placeholder='Postcode' pattern='(([A-Za-z][0-9]{1,2})|(([A-Za-z][A-HJ-Ya-hj-ya][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-HJ-Ya-hj-y][0-9]?[A-Za-z]))))[\s]*[0-9][A-Za-z]{2}' required>
+
+		<input type='checkbox' class='form__input--web' name='website' value='website' tabindex='-1'>
+
+		<div class='form__consent'>
+			<input type='checkbox' id='contactconsent' class='form__consent-checkbox' name='consent' value='granted' required>
+				<label for='contactconsent' class='form__label form__note form__note--consent'>I consent to the storage of my information while this query is being handled.</label>
+		</div>
+
+		<p class='form__note form__note--privacy'>For more info, please see <a href='/' id='contactform__privacy-policy-link' data-action='privacy' data-actionurl='/internal/contact-form-processor/'>our privacy policy</a></p>
+				<input type='submit' class='form__button form__button--submit' value='submit' data-action='contact'  data-actionurl='/internal/contact-form-processor/'>
+				<input type='button' class='form__button form__button--cancel' value='cancel' data-action='cancel' data-actionurl='/' >
+	</div>	
+</form>
