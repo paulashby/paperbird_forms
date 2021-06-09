@@ -3,9 +3,11 @@
 		<csrf-token-placeholder>
 		<label for='contactfname' class='form__label'>First name:</label>
 		<input type='text' id='contactfname' class='form__input form__input--name' name='fname' placeholder='First name' required>
+		<label class='form__error'>Please enter your first name</label>
 
 		<label for='contactlname' class='form__label'>Last name:</label>
 		<input type='text' id='contactlname' class='form__input form__input--name' name='lname' placeholder='Last name' required>
+		<label class='form__error'>Please enter your last name</label>
 
 		<label for='contactemail' class='form__label'>Please enter a valid email address:</label>
 		<input type='email' id='contactemail' class='form__input form__input--validate form__input--email' name='email' placeholder='Email address' pattern='^([\w\-\.]+)@((\[([0-9]{1,3}\.){3}[0-9]{1,3}\])|(([\w\-]+\.)+)([a-zA-Z]{2,4}))$' required>
@@ -13,9 +15,11 @@
 
 		 <label for='regaddress' class='form__label'>Address:</label>
 		 <textarea id='regaddress' class='form__input  form__input--textarea form__input--address' name='address' placeholder='Address' pattern='[A-Za-z\d,.-\s]+' required></textarea></textarea>
+		<label class='form__error'>Please enter your address</label>
 
 		 <label for='regpostcode' class='form__label'>Postcode:</label>
 		 <input type='text' id='regpostcode' class='form__input form__input--validate form__input--postcode' name='postcode' placeholder='Postcode' pattern='(([A-Za-z][0-9]{1,2})|(([A-Za-z][A-HJ-Ya-hj-ya][0-9]{1,2})|(([A-Za-z][0-9][A-Za-z])|([A-Za-z][A-HJ-Ya-hj-y][0-9]?[A-Za-z]))))[\s]*[0-9][A-Za-z]{2}' required>
+		<label class='form__error'>Please enter a valid postcode</label>
 
 		<input type='checkbox' class='form__input--web' name='website' value='website' tabindex='-1'>
 
